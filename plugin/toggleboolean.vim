@@ -21,7 +21,7 @@ let g:toggle_boolean_dict = {
             \ "1": "0", "0": "1",
             \ }
 
-function! s:toggleboolvalue() abort
+function! s:toggleboolean() abort
     let word = expand('<cword>')
     if has_key(g:toggle_boolean_dict, word)
         let val = g:toggle_boolean_dict[word]
@@ -31,6 +31,6 @@ function! s:toggleboolvalue() abort
     return "mp:\<c-u>echo '\"".word."\" is not boolean.'\<esc>`p"
 endfunction 
 
-nnoremap <expr> <Plug>ToggleBoolean <sid>togglebooleanvalue()
-command! -nargs=0 ToggleBoolean call <sid>togglebooleanvalue()
+nnoremap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
+command! -nargs=0 ToggleBoolean call <sid>toggleboolean()
 
