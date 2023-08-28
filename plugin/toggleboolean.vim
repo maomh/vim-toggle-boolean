@@ -3,7 +3,7 @@
 " Version:      1.0
 
 if exists("g:loaded_toggleboolean") || &cp
-  finish
+    finish
 endif
 let g:loaded_toggleboolean= 1
 
@@ -31,9 +31,9 @@ function! s:toggleboolean() abort
     return "mp:\<c-u>echo '\"".word."\" is not boolean.'\<esc>`p"
 endfunction 
 
-command! -nargs=0 ToggleBoolean call <sid>toggleboolean()
+nmap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
 
-if g:toggle_boolean_no_mapping
-    nnoremap <nowait><silent> <leader>bb :<c-u>ToggleBoolean<cr>
+if g:toggle_boolean_no_mapping == 0
+    nmap <nowait><silent> <leader>bb <Plug>ToggleBoolean
 endif
 
