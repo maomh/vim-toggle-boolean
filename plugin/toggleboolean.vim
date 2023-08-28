@@ -1,7 +1,6 @@
 " toggleboolean.vim - Toggle Boolean
 " Author:       maomh <https://github.com/maomh>
 " Version:      1.0
-" GetLatestVimScripts: 1697 1 :AutoInstall: surround.vim
 
 if exists("g:loaded_toggleboolean") || &cp
   finish
