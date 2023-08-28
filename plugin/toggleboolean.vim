@@ -31,6 +31,9 @@ function! s:toggleboolean() abort
     return "mp:\<c-u>echo '\"".word."\" is not boolean.'\<esc>`p"
 endfunction 
 
-nnoremap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
 command! -nargs=0 ToggleBoolean call <sid>toggleboolean()
+
+if g:toggle_boolean_no_mapping
+    nnoremap <nowait><silent> <leader>bb :<c-u>ToggleBoolean<cr>
+endif
 
