@@ -25,7 +25,6 @@ function! s:toggleboolean() abort
     let word = expand('<cword>')
     if has_key(g:toggle_boolean_dict, word)
         let val = g:toggle_boolean_dict[word]
-        echo val
         return "mpviwc".val."\<esc>`p"
     endif
     return "mp:\<c-u>echo '\"".word."\" is not boolean.'\<esc>`p"
@@ -34,6 +33,6 @@ endfunction
 nmap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
 
 if g:toggle_boolean_no_mapping == 0
-    nmap <nowait><silent> <leader>bb <Plug>ToggleBoolean
+    nnoremap <nowait><silent> <leader>bb <Plug>ToggleBoolean
 endif
 
