@@ -16,9 +16,9 @@ Plug 'maomh/vim-toggle-boolean'
 ```
 
 ## Usage
-默认按键是 `<M-b>` ，可以用下面的方式自定义
+默认按键是 `<leader>gb` ，可以用下面的方式自定义
 
-The default keymapping is `<M-b>` you can remap it as follow.
+The default keymapping is `<leader>gb` you can remap it as follow.
 
 ```vim
 let g:toggle_boolean_no_mapping=1

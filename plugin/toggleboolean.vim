@@ -33,6 +33,6 @@ endfunction
 nmap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
 
 if g:toggle_boolean_no_mapping == 0
-    nnoremap <nowait><silent> <M-b> <Plug>ToggleBoolean
+    nnoremap <nowait><silent> <leader>gb <Plug>ToggleBoolean
 endif
 
