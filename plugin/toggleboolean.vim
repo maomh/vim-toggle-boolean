@@ -32,9 +32,9 @@ endfunction
 
 
 
-nmap <expr> <Plug>ToggleBoolean <sid>toggleboolean()<bar>silent! call repeat#set("\<Plug>ToggleBoolean", v:count)
+nmap <expr> <Plug>ToggleBoolean <sid>toggleboolean()
 
-if g:toggle_boolean_no_mapping == 0
-    nnoremap <nowait><silent> <leader>gb <Plug>ToggleBoolean
+if g:toggle_boolean_no_mapping == 1
+    nnoremap <nowait><silent> <leader>gb silent! call repeat#set("\<Plug>ToggleBoolean", v:count)
 endif
 
